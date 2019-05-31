@@ -41,7 +41,6 @@
     <body>
         <nav>
             <ul>
-                
                 <% if(person){%>
                     <!-- If person exists -->
                     <li><a href="/auth/logout">Logout</a></li>
@@ -51,13 +50,15 @@
                 <li><a href="/">Homepage</a></li>
                 <li><a href="profile">Profile</a></li>
             </ul>
+            </ul>
         </nav>
         <header>
-            <h1>Test OAuth </h1>
-            <h2>Homepage</h2>
+            <h1>Welcome to your profile, <%= person.username %> </h1>
+            <!-- This is used to load data dynamically  -->
         </header>
         <main>
-            <p>Testing instagram Login</p>
+            <img src="<%= person.thumbnail %>">
         </main>
     </body>
 </html>
+
